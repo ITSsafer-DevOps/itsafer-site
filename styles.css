@@ -589,65 +589,76 @@ a:hover {
 /* Footer */
 .footer {
     background-color: #000000;
-    border-top: 1px solid #333333;
+    border-top: 2px solid var(--primary-color);
     padding: 3rem 0 2rem;
     color: var(--text-secondary);
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-.footer-section h4 {
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-logo-bracket {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+}
+
+.footer-logo-text {
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-weight: 700;
-}
-
-.footer-section p {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section a {
-    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: var(--transition);
-    font-size: 0.95rem;
 }
 
-.footer-section a:hover {
+.footer-links a:hover {
     color: var(--primary-color);
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #333333;
+    margin-bottom: 1.5rem;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #333333;
     color: var(--text-tertiary);
-    font-size: 0.9rem;
-}
-
-.footer-bottom a {
-    color: var(--text-tertiary);
-    text-decoration: underline;
-}
-
-.footer-bottom a:hover {
-    color: var(--primary-color);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
 }
 
 /* Responsive Design */
@@ -679,7 +690,14 @@ a:hover {
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+        flex-direction: column;
     }
 }
 
