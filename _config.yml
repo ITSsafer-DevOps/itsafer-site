@@ -1,0 +1,80 @@
+# Jekyll Configuration for GitHub Pages
+# This file configures how GitHub processes your site
+
+# Site Settings
+title: ITSsafer DevOps Portfolio
+description: Professional portfolio showcasing enterprise-grade security and DevOps solutions
+url: https://github.com/ITSsafer-DevOps
+baseurl: /portfolio  # Change this if your repo name is different
+
+# Owner/Author Information
+owner:
+  name: ITSsafer DevOps
+  email: devops@itssafer.com
+  github: ITSsafer-DevOps
+
+# Site Configuration
+theme: null  # We're using custom CSS, not a Jekyll theme
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Build Settings
+source: .
+destination: _site
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+include:
+  - .nojekyll
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO Settings
+google_analytics: 
+twitter:
+  username: "@ITSsafer"
+
+# Social URLs
+social:
+  links:
+    - https://github.com/ITSsafer-DevOps
+
+# Site Collections (optional)
+collections_dir: collections
+
+# Timezone
+timezone: Europe/Bratislava
+
+# Pagination (if added later)
+paginate: 10
+paginate_path: /page:num
+
+# Code Highlighter
+highlighter: rouge
+
+# Kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Build Command
+# If using custom build, uncomment below
+# keep_files: []
+
+# Safe mode
+safe: false
+
+# File Upload Limits
+upload_limit: 100
+
+# Comment out if using standard GitHub Pages build
+# skip_config_files: false
