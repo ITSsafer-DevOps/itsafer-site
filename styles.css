@@ -590,68 +590,8 @@ a:hover {
 .footer {
     background-color: #000000;
     border-top: 2px solid var(--primary-color);
-    padding: 3rem 0 2rem;
+    padding: 2rem 0;
     color: var(--text-secondary);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.footer-logo-bracket {
-    color: var(--primary-color);
-    font-weight: 900;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
-}
-
-.footer-logo-text {
-    color: var(--text-primary);
-    font-weight: 900;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-}
-
-.footer-brand p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a {
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-divider {
-    height: 1px;
-    background-color: #333333;
-    margin-bottom: 1.5rem;
 }
 
 .footer-bottom {
