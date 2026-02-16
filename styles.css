@@ -639,6 +639,16 @@ a:hover {
         gap: 1rem;
         flex-direction: column;
     }
+
+    .email-popup {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .email-popup-content {
+        max-width: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -647,6 +657,60 @@ a:hover {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* Email Popup */
+.email-popup {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.email-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.email-popup-content {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(15, 15, 15, 0.95));
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 24px rgba(238, 90, 82, 0.2);
+    text-align: center;
+    max-width: 300px;
+}
+
+.email-popup-content p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.email-popup-content code {
+    display: block;
+    background-color: rgba(238, 90, 82, 0.1);
+    color: var(--primary-color);
+    padding: 0.75rem;
+    border-radius: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+    border: 1px solid var(--primary-color);
+}
+
+.email-link {
+    cursor: pointer !important;
 }
 
 /* Utility Classes */

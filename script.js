@@ -1,5 +1,40 @@
+// Email copy functionality
+const emailContact = document.getElementById('email-contact');
+if (emailContact) {
+    emailContact.addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = 'itssafer@itssafer.org';
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText(email).then(() => {
+            // Show popup
+            let popup = document.getElementById('email-popup');
+            if (!popup) {
+                popup = document.createElement('div');
+                popup.id = 'email-popup';
+                popup.className = 'email-popup';
+                popup.innerHTML = `
+                    <div class="email-popup-content">
+                        <p>Email copied to clipboard!</p>
+                        <code>${email}</code>
+                    </div>
+                `;
+                document.body.appendChild(popup);
+            }
+            popup.classList.add('show');
+            
+            // Hide popup after 3 seconds
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 3000);
+        }).catch(() => {
+            alert('Failed to copy email');
+        });
+    });
+}
+
 // Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(#email-contact)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
